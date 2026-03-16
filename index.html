@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="description" content="Open-world 3D car game with walk and enter/exit mechanics" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" href="./icons/icon-192.svg" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.svg" />
+    <title>Open World Car Game</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="game-canvas"></canvas>
+
+    <div id="hud">
+      <div id="mode">Mode: On Foot</div>
+      <div id="speed">Speed: 0 km/h</div>
+      <div id="help">
+        <p>On Foot: WASD move, Shift sprint, Mouse look, E enter car</p>
+        <p>In Car: WASD drive, Space handbrake, E exit, R reset car</p>
+        <p>Global: P pause, Restart button</p>
+      </div>
+      <div id="prompt" class="hidden">Press E to enter</div>
+      <div id="paused" class="hidden">Paused</div>
+    </div>
+
+    <div id="menu-buttons">
+      <button id="pause-btn" type="button">Pause</button>
+      <button id="restart-btn" type="button">Restart</button>
+    </div>
+
+    <div id="start-overlay">
+      <h1>Open World Car Game</h1>
+      <p>Click to lock pointer and start playing.</p>
+      <button id="start-btn" type="button">Start Game</button>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
